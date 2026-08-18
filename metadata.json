@@ -1,0 +1,6 @@
+{
+  "name": "Chat Ad Architect",
+  "description": "Autonomous marketing agent workspace to chat, generate ad copy and review social content calendars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
