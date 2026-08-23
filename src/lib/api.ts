@@ -91,7 +91,7 @@ export type ApiResult<T> = { ok: true; data: T } | { ok: false; error: string };
 
 const GENERIC_ERROR = "Something went wrong reaching the server — try again.";
 export const ACTION_TIMEOUT_MS = 180_000; // 180s (3 minutes, accommodates rate limit retries)
-export const READ_TIMEOUT_MS = 15_000; // 15s fast-fail for read operations
+export const READ_TIMEOUT_MS = 120_000; // 120s (2 minutes) to allow cold-start on free tier backend services
 
 async function request<T>(
   path: string,
