@@ -9,10 +9,10 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 export default defineConfig({
   vite: {
     preview: {
-      allowedHosts: true,
+      allowedHosts: ["chat-ad-architect.onrender.com", ".onrender.com", "localhost", "127.0.0.1"],
     },
     server: {
-      allowedHosts: true,
+      allowedHosts: ["chat-ad-architect.onrender.com", ".onrender.com", "localhost", "127.0.0.1"],
     },
   },
   tanstackStart: {
