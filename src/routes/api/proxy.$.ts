@@ -35,9 +35,10 @@ async function forward(request: Request, splat: string) {
         "content-type": response.headers.get("content-type") ?? "application/json",
       },
     });
-  } catch {
+  } catch (err) {
     clearTimeout(timeoutId);
-    return new Response(JSON.stringify({ error: "upstream_unreachable" }), {
+    console.error(`[API Proxy Error] Forwarding to "${target}" failed:`, err);
+    return new Response(JSON.stringify({ error: "upstream_unreachable", target }), {
       status: 502,
       headers: { "content-type": "application/json" },
     });
