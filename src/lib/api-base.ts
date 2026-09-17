@@ -6,7 +6,7 @@
 export const API_BASE_URL =
   (typeof process !== "undefined" && (process.env.API_BASE_URL || process.env.BACKEND_URL)) ||
   (typeof import.meta !== "undefined" && import.meta.env?.VITE_API_BASE_URL) ||
-  "https://marketing-agent-rr7e.onrender.com";
+  "https://marketing-agent-mpto.onrender.com";
 
 /** Browser calls go through the same-origin proxy route to avoid CORS. */
 export const API_PROXY_PREFIX = "/api/proxy";
